@@ -1,0 +1,35 @@
+@import '@/styles/mixins.scss';
+
+.models {
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+
+	width: 100%;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	&-item {
+		display: flex;
+		width: calc(33.33333% - 31px);
+		margin: 0 15px 30px;
+		flex: none;
+	}
+
+	@include lg {
+		&-item {
+			width: calc(50% - 31px);
+		}
+	}
+
+	@include md {
+		&-item {
+			width: calc(100% - 31px);
+		}
+	}
+}

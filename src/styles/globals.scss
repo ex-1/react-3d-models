@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+:root {
+	--light: #{$light};
+	--white: #{$white};
+	--dark: #{$dark};
+	--black: #{$black};
+	--blue: #{$blue};
+
+	--shadow: #{$shadow};
+
+	--glow-blue: #{$glow-blue};
+
+	--font-family-sans-serif: #{$font-family-sans-serif};
+
+	--font-family-monospace: #{$font-family-monospace};
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-size: inherit;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	font-family: var(--font-family-sans-serif);
+	color: var(--black);
+	background-color: var(--light);
+}

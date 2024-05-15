@@ -1,0 +1,16 @@
+[
+	{
+		"title": "Section 1",
+		"description": "Section 1 (with keys table) description",
+		"table-keys": [
+			{ "keys": ["alt", "shift", "r"], "action": "action for the keys 1" },
+			{ "keys": ["alt", "ctrl", "d"], "action": "action for the keys 2" },
+			{ "keys": ["alt", "del"], "action": "action for the keys 3" }
+		]
+	},
+	{
+		"title": "Section 2",
+		"description": "Section 2 (without keys table) description",
+		"table-keys": null
+	}
+]
