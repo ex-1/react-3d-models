@@ -10,13 +10,17 @@ export interface ModelCardProps {
 	imagePath: string
 	modelPath: string
 	description: string
+	scale?: number
+	position?: [number, number, number]
 }
 
 export default function ModelCard({
 	imagePath,
 	title,
 	description,
-	modelPath
+	modelPath,
+	scale,
+	position
 }: ModelCardProps) {
 	const { changeModelData } = useContext(ModelPreviewContext)
 
@@ -26,7 +30,9 @@ export default function ModelCard({
 				isShow: true,
 				url: modelPath,
 				title: title,
-				description: description
+				description: description,
+				position: position,
+				scale: scale
 			})
 		})
 

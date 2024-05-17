@@ -8,6 +8,8 @@ export type TModelProps =
 			url: string
 			title: string
 			description: string
+			scale?: number
+			position?: [number, number, number]
 	  }
 	| {
 			isShow: false
@@ -15,6 +17,8 @@ export type TModelProps =
 			url: null
 			title: null
 			description: null
+			scale: null
+			position: null
 	  }
 
 export const ModelPreviewContext = createContext<{
@@ -25,11 +29,12 @@ export const ModelPreviewContext = createContext<{
 		isShow: false,
 		url: null,
 		title: null,
-		description: null
+		description: null,
+		scale: null,
+		position: null
 	},
-	changeModelData: (data: TModelProps) => {
-		console.log(data)
-	}
+
+	changeModelData: (data: TModelProps) => console.log(data)
 })
 
 export const useModelsPage = () => {
@@ -37,7 +42,9 @@ export const useModelsPage = () => {
 		isShow: false,
 		url: null,
 		title: null,
-		description: null
+		description: null,
+		scale: null,
+		position: null
 	})
 
 	const changeModelData = (data: TModelProps) => setModelData(data)

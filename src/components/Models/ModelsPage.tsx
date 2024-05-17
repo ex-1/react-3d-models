@@ -16,13 +16,7 @@ export default function ModelsPage() {
 	return (
 		<div className='models-wrapper'>
 			<ModelPreviewContext.Provider value={{ modelData, changeModelData }}>
-				{modelData.isShow && (
-					<ModelPreview
-						description={modelData.description}
-						title={modelData.title}
-						modelURL={modelData.url}
-					/>
-				)}
+				{modelData.isShow && <ModelPreview />}
 				<div className='container-fluid'>
 					<div className='models'>
 						{models.map((d, i) => (

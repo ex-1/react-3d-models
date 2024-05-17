@@ -24,6 +24,7 @@
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	overflow: hidden;
 
 	width: 100%;
 	height: 100%;
@@ -31,11 +32,43 @@
 	background-color: var(--white);
 	border-radius: 3px;
 	z-index: 101;
+
+	&__btn-close {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		z-index: 102;
+
+		padding: 0.25rem 0.5rem;
+		border-radius: 50%;
+		border: 1px solid transparent;
+		background-color: var(--dark);
+
+		will-change: background-color;
+		transition: background-color 300ms ease-in-out 0s;
+
+		& span {
+			color: var(--light);
+			will-change: color;
+			transition: color 300ms ease-in-out 0s;
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: var(--black);
+
+			& span {
+				color: var(--white);
+			}
+		}
+	}
 }
 
 .model-interactive {
 	width: 100%;
 	height: 100%;
+
+	background-color: var(--light);
 
 	&-wrapper {
 		width: 100%;
@@ -54,4 +87,36 @@
 	gap: 0.5rem;
 
 	padding: 1rem;
+
+	& h3 {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+
+	& div {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+}
+
+.btn-download {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0.35rem 1rem;
+	text-align: center;
+
+	width: 12rem;
+
+	color: var(--white);
+	font-weight: 600;
+	border-radius: 0.675rem;
+	background-color: var(--blue);
+
+	&:hover {
+		filter: brightness(0.95);
+	}
 }

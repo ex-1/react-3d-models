@@ -1,20 +1,28 @@
-import { useContext, useEffect } from 'react'
+import { startTransition, useContext, useEffect } from 'react'
 import { ModelPreviewContext } from '../useModelsPage'
 
 export const useModelPreview = () => {
 	const { changeModelData, modelData } = useContext(ModelPreviewContext)
+
+	const resetModelData = () => {
+		startTransition(() =>
+			changeModelData({
+				isShow: false,
+				url: null,
+				title: null,
+				description: null,
+				position: null,
+				scale: null
+			})
+		)
+	}
 
 	const handleEsc = (e: KeyboardEvent) => {
 		if (e instanceof KeyboardEvent && e.key !== 'Escape') return
 
 		e.preventDefault()
 
-		changeModelData({
-			isShow: false,
-			url: null,
-			title: null,
-			description: null
-		})
+		resetModelData()
 	}
 
 	const closeWindow = (e: React.MouseEvent) => {
@@ -23,13 +31,10 @@ export const useModelPreview = () => {
 		e.preventDefault()
 		e.stopPropagation()
 
-		changeModelData({
-			isShow: false,
-			url: null,
-			title: null,
-			description: null
-		})
+		resetModelData()
 	}
+
+	const handleCloseClick = () => resetModelData()
 
 	useEffect(() => {
 		const handleKeyboard = (e: KeyboardEvent) => handleEsc(e)
@@ -39,5 +44,5 @@ export const useModelPreview = () => {
 		}
 	}, [])
 
-	return { closeWindow, modelData }
+	return { closeWindow, handleCloseClick, modelData }
 }

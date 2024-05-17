@@ -7,14 +7,10 @@ import { useModelPreview } from './useModelPreview'
 import { Suspense } from 'react'
 
 import './ModelPreview.scss'
+// import { Euler } from 'three'
 
-export interface ModelPreviewProps {
-	scale?: number
-	position?: [number, number, number]
-}
-
-export default function ModelPreview({ position, scale }: ModelPreviewProps) {
-	const { closeWindow, modelData } = useModelPreview()
+export default function ModelPreview() {
+	const { closeWindow, handleCloseClick, modelData } = useModelPreview()
 
 	if (!modelData.isShow) throw new Error('Model preview error')
 
@@ -23,19 +19,23 @@ export default function ModelPreview({ position, scale }: ModelPreviewProps) {
 	return (
 		<div className='model-preview-cover' onClick={closeWindow}>
 			<div className='model-preview'>
+				<button className='model-preview__btn-close' onClick={handleCloseClick}>
+					<span>x</span>
+				</button>
 				<div className='model-interactive-wrapper'>
 					<div className='model-interactive'>
 						<Canvas>
-							<ambientLight intensity={0.3} />
+							<ambientLight intensity={1} />
 							<spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
 							<pointLight position={[-10, -10, -10]} />
 							<Suspense fallback={null}>
 								<primitive
 									object={gltf.scene}
-									position={position}
-									scale={scale}
+									position={modelData.position}
+									scale={modelData.scale}
+									// rotation={new Euler(0.1, 0, 0, 'XYZ')}
 								/>
-								<OrbitControls />
+								<OrbitControls autoRotate />
 							</Suspense>
 						</Canvas>
 					</div>
@@ -46,6 +46,14 @@ export default function ModelPreview({ position, scale }: ModelPreviewProps) {
 						className='model-description__description'
 						dangerouslySetInnerHTML={{ __html: modelData.description }}
 					/>
+					<a
+						download
+						target='_blank'
+						href={modelData.url}
+						className='btn-download'
+					>
+						Скачать модель
+					</a>
 				</div>
 			</div>
 		</div>
