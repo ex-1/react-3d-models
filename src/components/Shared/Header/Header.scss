@@ -11,8 +11,24 @@
 	}
 
 	&__logo {
-		width: 2rem;
-		height: 2rem;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		& .svg-logo {
+			background: url('/favicon.svg') no-repeat center center;
+			background-size: contain;
+			width: 1.75rem;
+			height: 1.75rem;
+		}
+
+		& h2 {
+			font-size: 1.1rem;
+			color: var(--dark);
+			font-weight: 800;
+			letter-spacing: -0.5px;
+		}
 	}
 }
 
@@ -68,12 +84,12 @@
 
 		&:hover {
 			cursor: pointer;
-			color: var(--blue);
+			color: var(--green);
 		}
 
 		&:hover::before {
 			width: 100%;
-			background-color: var(--blue);
+			background-color: var(--green);
 		}
 	}
 }

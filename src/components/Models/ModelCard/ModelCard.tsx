@@ -41,7 +41,10 @@ export default function ModelCard({
 			<div className='model-card__thumbnail'>
 				<div className='image-container'>
 					<div style={{ padding: '30%' }} />
-					<img src={imagePath} alt={`Img: ${title} (${imagePath})`} />
+					<img
+						src={imagePath}
+						alt={`NOT FOUND IMAGE: ${title} (${imagePath})`}
+					/>
 				</div>
 			</div>
 			<div className='model-card__footer'>

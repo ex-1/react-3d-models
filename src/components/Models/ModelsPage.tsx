@@ -14,7 +14,7 @@ export default function ModelsPage() {
 	const { modelData, changeModelData } = useModelsPage()
 
 	return (
-		<div className='models-wrapper'>
+		<div className='models-wrapper' id='page-top'>
 			<ModelPreviewContext.Provider value={{ modelData, changeModelData }}>
 				{modelData.isShow && <ModelPreview />}
 				<div className='container-fluid'>
@@ -27,6 +27,17 @@ export default function ModelsPage() {
 					</div>
 				</div>
 			</ModelPreviewContext.Provider>
+			<div className='container-fluid'>
+				<div className='row'>
+					<div className='col'>
+						<div className='page-bottom'>
+							<a href='#' className='btn-return' target='_self'>
+								<span>Вернуться в начало</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	)
 }

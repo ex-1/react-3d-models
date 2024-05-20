@@ -33,3 +33,33 @@
 		}
 	}
 }
+
+.page-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 1rem 0;
+}
+
+.btn-return {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	padding: 0.35rem 1rem;
+	border-radius: 0.315rem;
+
+	background-color: var(--green);
+	color: var(--white);
+	font-weight: 600;
+
+	will-change: filter;
+	transition: filter 300ms ease-in-out 0s;
+
+	&:hover {
+		cursor: pointer;
+		filter: brightness(1.05);
+	}
+}

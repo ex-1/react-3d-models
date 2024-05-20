@@ -19,7 +19,7 @@ const router = createBrowserRouter([
 		path: '/documentation',
 		element: <Documentation title={c.documentation} />
 	},
-	{ path: '/portfolio', element: <Portfolio title={c.models} /> }
+	{ path: '/portfolio', element: <Portfolio title={c.portfolio} /> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

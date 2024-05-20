@@ -1,16 +1,54 @@
 [
 	{
 		"title": "Section 1",
-		"description": "Section 1 (with keys table) description",
-		"table-keys": [
-			{ "keys": ["alt", "shift", "r"], "action": "action for the keys 1" },
-			{ "keys": ["alt", "ctrl", "d"], "action": "action for the keys 2" },
-			{ "keys": ["alt", "del"], "action": "action for the keys 3" }
+		"content": "Section 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) descriptionSection 1 (with keys table and image) description",
+		"thumbnail": "https://cdnb.artstation.com/p/assets/images/images/004/902/197/medium/kontorn-boonyanate-pic08.jpg?1487093974",
+		"extra": [
+			{
+				"type": "hotkeys",
+				"keysTable": [
+					{
+						"keys": ["Ctrl", "Alt", "Shift", "Esc"],
+						"action": "action for the keys 1"
+					},
+					{ "keys": ["alt", "ctrl", "d"], "action": "action for the keys 2" },
+					{ "keys": ["alt", "del"], "action": "action for the keys 3" }
+				]
+			},
+			{
+				"type": "image",
+				"url": "https://pushinka.top/uploads/posts/2023-04/1680531036_pushinka-top-p-tatsumaki-avatarki-avatarka-pinterest-23.png",
+				"name": "image-name-test"
+			}
 		]
 	},
+
 	{
 		"title": "Section 2",
-		"description": "Section 2 (without keys table) description",
-		"table-keys": null
+		"content": "Section 2 (with keys table) description",
+		"thumbnail": "https://cdnb.artstation.com/p/assets/images/images/004/902/197/medium/kontorn-boonyanate-pic08.jpg?1487093974",
+		"extra": [
+			{
+				"type": "hotkeys",
+				"keysTable": [
+					{ "keys": ["alt", "shift", "r"], "action": "action for the keys 1" },
+					{ "keys": ["alt", "ctrl", "d"], "action": "action for the keys 2" },
+					{ "keys": ["alt", "del"], "action": "action for the keys 3" }
+				]
+			}
+		]
+	},
+
+	{
+		"title": "Section 3",
+		"content": "Section 3 (with keys image) description",
+		"thumbnail": "none",
+		"extra": [
+			{
+				"type": "image",
+				"url": "",
+				"name": "image-name-test"
+			}
+		]
 	}
 ]

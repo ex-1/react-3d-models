@@ -2,18 +2,21 @@
 
 :root {
 	--light: #{$light};
+	--lighter: #{$lighter};
 	--white: #{$white};
 	--dark: #{$dark};
 	--black: #{$black};
-	--blue: #{$blue};
+	--green: #{$green};
 
 	--shadow: #{$shadow};
 
-	--glow-blue: #{$glow-blue};
+	--glow-green: #{$glow-green};
 
 	--font-family-sans-serif: #{$font-family-sans-serif};
 
 	--font-family-monospace: #{$font-family-monospace};
+
+	--image-plug: #{$image-plug};
 }
 
 html {

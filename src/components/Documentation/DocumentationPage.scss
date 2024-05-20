@@ -1,0 +1,42 @@
+@import '@/styles/mixins.scss';
+
+.documentation {
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+
+	width: 100%;
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	&-item {
+		display: flex;
+		width: calc(33.33333% - 31px);
+		margin: 0 15px 30px;
+		flex: none;
+
+		will-change: width;
+		transition: all 300ms ease-in-out 0s;
+
+		&.--opened {
+			width: calc(100% - 31px);
+		}
+	}
+
+	@include lg {
+		&-item {
+			width: calc(50% - 31px);
+		}
+	}
+
+	@include md {
+		&-item {
+			width: calc(100% - 31px);
+		}
+	}
+}

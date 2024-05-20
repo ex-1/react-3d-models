@@ -1,0 +1,170 @@
+.article-card {
+	box-shadow:
+		0 1px 1px var(--shadow),
+		0 7px 18px 0 var(--shadow);
+
+	transition: box-shadow 300ms ease-in-out;
+
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	width: 100%;
+
+	background-color: var(--white);
+	border-radius: 0.315rem;
+	overflow: hidden;
+
+	&__thumbnail {
+		display: block;
+
+		& .image-container {
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-image: var(--image-plug);
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-size: 25%;
+			}
+
+			& img {
+				color: #00000015;
+
+				text-align: center;
+
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				object-position: top;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 1;
+				transition: opacity 0.25s ease;
+			}
+		}
+	}
+
+	&__title {
+		padding: 0.25rem 0.5rem;
+
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__content {
+		padding: 0.25rem 0.5rem;
+		font-size: 0.85rem;
+
+		width: 100%;
+
+		flex-grow: 1;
+
+		&.--collapsed {
+			max-height: 120px;
+
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 3;
+
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&__extra {
+		&-wrapper {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			max-height: 0px;
+			overflow: hidden;
+
+			will-change: width;
+			transition: all 300ms ease-in-out 0s;
+
+			&.--opened {
+				max-height: calc(100% - 1px);
+			}
+		}
+
+		&-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+
+			overflow: hidden;
+			border-radius: 0.315rem;
+
+			width: 100%;
+
+			& img {
+				border-radius: 0.315rem;
+
+				width: 100%;
+
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+}
+
+.btn-expand {
+	padding: 0.25rem 0.5rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	position: relative;
+
+	width: 100%;
+
+	background-color: transparent;
+	border: none;
+
+	& span {
+		color: var(--green);
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+
+		width: 0px;
+		height: 0.2rem;
+
+		transition:
+			width 350ms ease-in-out 0s,
+			color 300ms ease-in-out 0s;
+		background-color: var(--green);
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:hover::before {
+		width: 100%;
+	}
+}
