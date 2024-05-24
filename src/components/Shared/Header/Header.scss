@@ -8,6 +8,12 @@
 		width: 100vw;
 		margin: 0 auto;
 		background-color: var(--white);
+
+		position: sticky;
+		top: 0;
+		z-index: 99;
+
+		box-shadow: 0 0 5px var(--shadow);
 	}
 
 	&__logo {
@@ -15,6 +21,12 @@
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+
+		padding: 0.5rem 0;
+
+		@include md {
+			justify-content: center;
+		}
 
 		& .svg-logo {
 			background: url('/favicon.svg') no-repeat center center;
@@ -26,7 +38,7 @@
 		& h2 {
 			font-size: 1.1rem;
 			color: var(--dark);
-			font-weight: 800;
+			font-weight: 700;
 			letter-spacing: -0.5px;
 		}
 	}

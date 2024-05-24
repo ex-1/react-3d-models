@@ -76,7 +76,10 @@ export default function ArticleCard({
 				)}
 			</div>
 
-			<button className='btn-expand' onClick={openMe}>
+			<button
+				className={cn('btn-expand', isOpened && '--opened')}
+				onClick={openMe}
+			>
 				<span>{isOpened ? 'Свернуть' : 'Подробнее'}</span>
 			</button>
 		</div>
