@@ -104,23 +104,3 @@
 		color: var(--black);
 	}
 }
-
-.btn-download {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	padding: 0.35rem 1rem;
-	text-align: center;
-
-	width: 12rem;
-
-	color: var(--white);
-	font-weight: 600;
-	border-radius: 0.675rem;
-	background-color: var(--green);
-
-	&:hover {
-		filter: brightness(0.95);
-	}
-}

@@ -31,7 +31,7 @@ export default function ModelsPage() {
 				<div className='row'>
 					<div className='col'>
 						<div className='page-bottom'>
-							<a href='#' className='btn-return' target='_self'>
+							<a href='#' className='primary-btn' target='_self'>
 								<span>Вернуться в начало</span>
 							</a>
 						</div>

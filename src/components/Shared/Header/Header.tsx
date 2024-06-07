@@ -10,7 +10,7 @@ export default function Header() {
 					<div className='col'>
 						<div className='header__logo'>
 							<div className='svg-logo' />
-							<h2>IVOXYGEN - PRXUD</h2>
+							<h2>Модельки моделечки</h2>
 						</div>
 					</div>
 					<div className='col-md-5'>

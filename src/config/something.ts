@@ -14,3 +14,9 @@ export type ArticleExtra =
 			name: string
 			url: string
 	  }
+
+export type TProfilePageCfg = {
+	'large-title': string
+	'small-title': string
+	avatar: string
+}

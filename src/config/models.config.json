@@ -24,8 +24,8 @@
 		"position": [0, 0, 0]
 	},
 	{
-		"title": "guitar_wood_-_10mb",
-		"description": "<span style='color: #f00'>guitar_wood_-_10mb</span>",
+		"title": "модель гитары",
+		"description": "<span style='color: #f00'>Класическая гитара</span>",
 		"imagePath": "/not/found/image/path.jpg",
 		"modelPath": "/models/guitar_wood_-_10mb.glb",
 		"scale": 1,

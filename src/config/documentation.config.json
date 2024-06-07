@@ -8,7 +8,7 @@
 				"type": "hotkeys",
 				"keysTable": [
 					{
-						"keys": ["Ctrl", "Alt", "Shift", "Esc"],
+						"keys": ["Ctrl", "Alt", "Shift"],
 						"action": "action for the keys 1"
 					},
 					{ "keys": ["alt", "ctrl", "d"], "action": "action for the keys 2" },

@@ -50,7 +50,7 @@ export default function ModelPreview() {
 						download
 						target='_blank'
 						href={modelData.url}
-						className='btn-download'
+						className='primary-btn'
 					>
 						Скачать модель
 					</a>
